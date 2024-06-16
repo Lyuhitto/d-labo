@@ -1,5 +1,5 @@
 <script setup>
-import logoDark from "@/assets/img/logo-ct-dark.png";
+import logoDark from "@/assets/img/logos/hammer-solid.svg";
 defineProps({
   brand: {
     type: Object,
@@ -7,7 +7,7 @@ defineProps({
     logo: String,
     route: "",
     default: () => ({
-      name: "Material Kit 2",
+      name: "〇〇会社 dーLabo",
       logo: logoDark,
       route: "/"
     })
@@ -49,71 +49,71 @@ defineProps({
     },
     default: () => [
       {
-        name: "company",
+        name: "d-Labo",
         items: [
           {
-            name: "about us",
+            name: "会社紹介",
             href: "https://www.creative-tim.com/presentation"
           },
           {
-            name: "freebies",
+            name: "会社目標",
             href: "https://www.creative-tim.com/templates/free"
           },
           {
-            name: "premium tools",
+            name: "技術ブログ",
             href: "https://www.creative-tim.com/templates/premium"
           },
           { name: "blog", href: "https://www.creative-tim.com/blog" }
         ]
       },
       {
-        name: "resources",
+        name: "採用・人事",
         items: [
-          { name: "illustrations", href: "https://iradesign.io/" },
+          { name: "採用情報", href: "https://iradesign.io/" },
           {
-            name: "bits & snippets",
+            name: "新卒・バイト",
             href: "https://www.creative-tim.com/bits"
           },
           {
-            name: "affiliate program",
+            name: "ポテンシャル採用について",
             href: "https://www.creative-tim.com/affiliates/new"
           }
         ]
       },
       {
-        name: "help & support",
+        name: "ヘルプ・お問い合わせ",
         items: [
           {
-            name: "contact us",
+            name: "ヘルプデスク",
             href: "https://www.creative-tim.com/contact-us"
           },
           {
-            name: "knowledge center",
+            name: "Q＆A",
             href: "https://www.creative-tim.com/knowledge-center"
           },
           {
-            name: "custom development",
+            name: "お問い合わせ",
             href: "https://services.creative-tim.com/"
           },
           {
-            name: "sponsorships",
+            name: "緊急連絡先について",
             href: "https://www.creative-tim.com/sponsorships"
           }
         ]
       },
       {
-        name: "legal",
+        name: "サイト情報",
         items: [
           {
-            name: "terms & conditions",
+            name: "プライバシー",
             href: "https://www.creative-tim.com/terms"
           },
           {
-            name: "privacy policy",
+            name: "ユーザー情報取扱に関して",
             href: "https://www.creative-tim.com/privacy"
           },
           {
-            name: "licenses (EULA)",
+            name: "サイトマップ",
             href: "https://www.creative-tim.com/license"
           }
         ]
@@ -171,9 +171,9 @@ defineProps({
             <p class="text-dark my-4 text-sm font-weight-normal">
               All rights reserved. Copyright ©
               {{ new Date().getFullYear() }}
-              Material Kit by
+              d-Labo by
               <a href="https://www.creative-tim.com" target="_blank"
-                >Creative Tim</a
+                >〇〇会社 dーLabo</a
               >.
             </p>
           </div>
