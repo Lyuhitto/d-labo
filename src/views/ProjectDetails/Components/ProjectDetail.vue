@@ -17,47 +17,46 @@
           <p class="project-description">トライしてみたいリノベーションチームに、ぜひご参加ください。</p>
         </div>
     </div>
-    <div class="container">
-
+    <div class="project-container">
       <div class="details-column">
 
         <p class="project-section">プロジェクトの詳細</p>
-        <p class="project-description">■スクール内容
+        <p class="project-description">■スクール内容</p>
 
-講師が作業を教えながら作業を行うので安心してご参加ください！
+        <p class="project-description">講師が作業を教えながら作業を行うので安心してご参加ください！</p>
 
-・ペイント
-・残置物撤去
-・天井張り
-・壁づくり
-・本棚づくり
+        <ul>
+          <li>ペイント</li>
+          <li>残置物撤去</li>
+          <li>天井張り</li>
+          <li>壁づくり</li>
+          <li>本棚づくり</li>
+        </ul>
 
-（スケジュール例）
-1日目　DIYの基礎講座
-2日目　現地ワークショップ　残置物撤去・塗装
-3日目　現地ワークショップ　本棚、間仕切りづくり
-4日目　現地ワークショップ　天井張り、片付け
-※工事の進捗状況により変更有
+        <p class="project-description">（スケジュール例）</p>
+        <p class="project-description">1日目　DIYの基礎講座</p>
+        <p class="project-description">2日目　現地ワークショップ　残置物撤去・塗装</p>
+        <p class="project-description">3日目　現地ワークショップ　本棚、間仕切りづくり</p>
+        <p class="project-description">4日目　現地ワークショップ　天井張り、片付け</p>
+        <p class="project-description break">※工事の進捗状況により変更有</p>
 
+        <p class="project-description">■募集人数</p>
+        <p class="project-description break">15人</p>
 
-■募集人数
+        <p class="project-description">■参加費</p>
+        <p class="project-description break">40000円/名　ランチ、ドリンク込み</p>
 
-15人
-
-参加費：5000円/名　ランチ、ドリンク込み
-
-
-■申し込み
-フォームからお申し込みください！</p>
+        <p class="project-description">■申し込み</p>
+        <p class="project-description">下記フォームからお申し込みください！</p>
       </div>
-      <div class="application-column">
-        <div class="application-form">
-          <p class="application-section">DIYで作りたいもの</p>
-          <input type="text" class="text-box"/>
-          <p class="application-section">備考</p>
-          <textarea class="text-area"></textarea>
-          <button>申し込み</button>
-        </div>
+    </div>
+    <div class="application-column">
+      <div class="application-form">
+        <p class="application-section">DIYで作りたいもの</p>
+        <input type="text" class="text-box"/>
+        <p class="application-section">備考</p>
+        <textarea class="text-area"></textarea>
+        <button>申し込み</button>
       </div>
     </div>
     <div class="relational-project">
@@ -109,6 +108,7 @@
   .project-section {
     font-size: 24pt;
     margin-bottom: 5px;
+    border-bottom: 2px solid #000;
   }
   .details-column {
     width: 100%;
