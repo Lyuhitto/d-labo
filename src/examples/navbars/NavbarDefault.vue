@@ -8,6 +8,9 @@ import ArrDark from "@/assets/img/down-arrow-dark.svg";
 import downArrow from "@/assets/img/down-arrow.svg";
 import DownArrWhite from "@/assets/img/down-arrow-white.svg";
 
+import hammer from "@/assets/img/logos/hammer-solid.svg";
+import logoDark from "@/assets/img/logos/circle-user-regular.svg";
+
 const props = defineProps({
   action: {
     type: Object,
@@ -119,8 +122,17 @@ watch(
         rel="tooltip"
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
+        style="font-size: 25px;"
       >
-        Material Kit 2
+        <div style="display: flex; gap: 5px; align-items: center; justify-content: center;">
+          <img
+            :src=hammer
+            alt="down-arrow"
+            class="arrow ms-2 d-lg-block d-none"
+            style="width: 30px; height: 30px;"
+          />
+          d-Labo
+        </div>
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -175,7 +187,7 @@ watch(
                 :class="getTextColor()"
                 >dashboard</i
               >
-              Pages
+              DIY プロジェクト
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -198,36 +210,48 @@ watch(
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1"
                       >
-                        Landing Pages
+                        街からのリクエスト
                       </div>
                       <RouterLink
                         :to="{ name: 'about' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>About Us</span>
+                        <span>プロジェクトを探す</span>
+                      </RouterLink>
+                      <RouterLink
+                        :to="{ name: 'about' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>店</span>
                       </RouterLink>
                       <RouterLink
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Contact Us</span>
+                        <span>学校</span>
                       </RouterLink>
                       <RouterLink
                         :to="{ name: 'author' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Author</span>
+                        <span>共有スペース</span>
                       </RouterLink>
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                       >
-                        Account
+                        ワークショップ
                       </div>
                       <RouterLink
                         :to="{ name: 'signin-basic' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Sign In</span>
+                        <span>ベージッククラス</span>
+                      </RouterLink>
+                      <RouterLink
+                        :to="{ name: 'signin-basic' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>DIY</span>
                       </RouterLink>
                     </div>
                   </div>
@@ -271,7 +295,7 @@ watch(
               </div>
             </div>
           </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          <!-- <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
@@ -285,7 +309,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              Sections
+              コミュニティー・ニュース
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -318,7 +342,7 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Page Sections
+                              地域コミュニティー
                             </h6>
                             <span class="text-sm">See all sections</span>
                           </div>
@@ -360,7 +384,7 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Navigation
+                              後記・プロジェクトの本音
                             </h6>
                             <span class="text-sm">See all navigations</span>
                           </div>
@@ -408,7 +432,7 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Input Areas
+                              物のリサイクル
                             </h6>
                             <span class="text-sm">See all input areas</span>
                           </div>
@@ -450,7 +474,7 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Attention Catchers
+                              ニュース
                             </h6>
                             <span class="text-sm">See all examples</span>
                           </div>
@@ -498,7 +522,7 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Elements
+                              広告
                             </h6>
                             <span class="text-sm">See all elements</span>
                           </div>
@@ -753,7 +777,23 @@ watch(
                 </div>
               </div>
             </div>
+          </li> -->
+          <li class="nav-item dropdown mx-2">
+            <RouterLink
+              class="dropdown-item ps-3 border-radius-md"
+              :to="{ name: 'el-typography' }"
+              style="display: flex; align-items: center; justify-content: center;"
+            >
+              <i
+                class="material-icons opacity-6 me-2 text-md"
+                :class="getTextColor()"
+                >article</i
+              >
+                d-Laboに申し込む
+            </RouterLink>
           </li>
+        </ul>
+        <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
@@ -763,17 +803,14 @@ watch(
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i
-                class="material-icons opacity-6 me-2 text-md"
-                :class="getTextColor()"
-                >article</i
-              >
-              Docs
-              <img
-                :src="getArrowColor()"
-                alt="down-arrow"
-                class="arrow ms-2 d-lg-block d-none"
-              />
+              <div>
+                D太郎 様
+                <img
+                  :src=logoDark
+                  class="arrow ms-2 d-lg-block d-none"
+                  style="width: 30px; height: 30px;"
+                />
+              </div>
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -794,11 +831,10 @@ watch(
                       <h6
                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                       >
-                        Getting Started
+                        ユーザーダッシュボード
                       </h6>
                       <span class="text-sm"
-                        >All about overview, quick start, license and
-                        contents</span
+                        >ダッシュポード</span
                       >
                     </a>
                   </li>
@@ -835,110 +871,7 @@ watch(
                   </li>
                 </ul>
               </div>
-              <div class="row d-lg-none">
-                <div class="col-md-12 g-0">
-                  <a
-                    class="dropdown-item py-2 ps-3 border-radius-md"
-                    href="./pages/about-us.html"
-                  >
-                    <h6
-                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                    >
-                      Getting Started
-                    </h6>
-                    <span class="text-sm"
-                      >All about overview, quick start, license and
-                      contents</span
-                    >
-                  </a>
-                  <a
-                    class="dropdown-item py-2 ps-3 border-radius-md"
-                    href="./pages/about-us.html"
-                  >
-                    <h6
-                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                    >
-                      Foundation
-                    </h6>
-                    <span class="text-sm"
-                      >See our colors, icons and typography</span
-                    >
-                  </a>
-                  <a
-                    class="dropdown-item py-2 ps-3 border-radius-md"
-                    href="./pages/about-us.html"
-                  >
-                    <h6
-                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                    >
-                      Components
-                    </h6>
-                    <span class="text-sm"
-                      >Explore our collection of fully designed components</span
-                    >
-                  </a>
-                  <a
-                    class="dropdown-item py-2 ps-3 border-radius-md"
-                    href="./pages/about-us.html"
-                  >
-                    <h6
-                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                    >
-                      Plugins
-                    </h6>
-                    <span class="text-sm"
-                      >Check how you can integrate our plugins</span
-                    >
-                  </a>
-                  <a
-                    class="dropdown-item py-2 ps-3 border-radius-md"
-                    href="./pages/about-us.html"
-                  >
-                    <h6
-                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
-                    >
-                      Utility Classes
-                    </h6>
-                    <span class="text-sm"
-                      >For those who want flexibility, use our utility
-                      classes</span
-                    >
-                  </a>
-                </div>
-              </div>
             </div>
-          </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
-            <a
-              href="https://www.github.com/creativetimofficial/vue-material-kit"
-              class="nav-link d-flex cursor-pointer align-items-center"
-            >
-              <svg
-                width="20px"
-                height="20px"
-                class="material-icons me-2 opacity-6"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                data-testid="GitHubIcon"
-                :fill="props.transparent && '#fff'"
-              >
-                <path
-                  d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"
-                ></path>
-              </svg>
-              Github
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-lg-block d-none">
-          <li class="nav-item">
-            <a
-              :href="action.route"
-              class="btn btn-sm mb-0"
-              :class="action.color"
-              onclick="smoothToPricing('pricing-soft-ui')"
-              >{{ action.label }}</a
-            >
           </li>
         </ul>
       </div>
